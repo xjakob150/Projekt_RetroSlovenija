@@ -1,8 +1,14 @@
-import Navbar from './components/Navbar/Navbar.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import LoginPage from './pages/LoginPage.jsx';
 
 function App() {
   return (
-    <Navbar/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage/>} />
+      </Routes>
+    </Router>
   );
 }
 

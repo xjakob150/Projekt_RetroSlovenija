@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ const RegisterForm = () => {
             if (!res.ok) throw new Error(data.message);
 
             alert('Registracija je bila uspešna!');
+            navigate('/LoginPage');
         } catch (err) {
             setError(err.message);
         }
@@ -77,7 +79,7 @@ const RegisterForm = () => {
             </form>
             <div className="container mt-6 p-4 text-center">
                 <p className="mb-2">Za vpis klikni:</p>
-                <Link to="/LoginPage" className="Link">
+                <Link to="/LoginPage" className="link">
                     Tukaj
                 </Link>
             </div>

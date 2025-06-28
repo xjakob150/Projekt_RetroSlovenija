@@ -7,11 +7,11 @@ import './App.css';
 function RegisterPage() {
   return (
     <div className="app-container">
-      <Navbar />
-      <main className="main-content">
-        <RegisterForm/>
-      </main>
-      <Footer />
+      <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave wave2"></div>
+      </div>
+      <RegisterForm />
     </div>
   )
 }

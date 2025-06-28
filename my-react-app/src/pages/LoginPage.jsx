@@ -6,11 +6,11 @@ import './App.css';
 function LoginPage() {
   return (
     <div className="app-container">
-      <Navbar />
-      <main className="main-content">
-        <LoginForm />
-      </main>
-      <Footer />
+      <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave wave2"></div>
+      </div>
+      <LoginForm />
     </div>
   )
 }

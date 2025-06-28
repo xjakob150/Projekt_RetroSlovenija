@@ -21,7 +21,7 @@ const LoginForm = () => {
 
             if (!res.ok) throw new Error(data.message);
 
-            navigate('/UserPage');
+            navigate('/');
         } catch (err) {
             setError(err.message);
         }

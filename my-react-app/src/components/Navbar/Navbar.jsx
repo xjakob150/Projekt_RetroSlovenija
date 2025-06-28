@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
 function Navbar() {
@@ -9,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-blue">
+    <nav className="navbar navbar-expand-lg navbar-light z-3 sticky-top">
       <a className="navbar-brand" href="#">RetroSlovenija</a>
 
       <button
@@ -26,10 +27,10 @@ function Navbar() {
       <div className={`collapse navbar-collapse${isOpen ? ' show' : ''}`} id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="#">Domov </a>
+            <Link className="nav-link" to="/">Domov </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Kontakt</a>
+            <Link className="nav-link" to="/LoginPage">Vpis</Link>
           </li>
         </ul>
       </div>

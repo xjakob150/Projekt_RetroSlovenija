@@ -21,6 +21,8 @@ const LoginForm = () => {
 
             if (!res.ok) throw new Error(data.message);
 
+            sessionStorage.setItem('token', JSON.stringify(data.token));
+
             navigate('/');
         } catch (err) {
             setError(err.message);

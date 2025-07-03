@@ -44,9 +44,14 @@ function Navbar() {
           </li>
           <li className="nav-item">
             {isLoggedIn ? (
-              <button className="nav-link btn btn-link" onClick={handleLogout}>
-                Odjava
-              </button>
+              <div className='d-flex flex-column flex-sm-row align-items-start'>
+                <button className="nav-link btn btn-link" onClick={handleLogout}>
+                  Odjava
+                </button>
+                <Link to="/UserPage" className="nav-link btn btn-link">
+                  Moj profil
+                </Link>
+              </div>
             ) : (
               <Link className="nav-link" to="/LoginPage">Vpis</Link>
             )}
